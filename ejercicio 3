@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+float calcularPerimetro(float largo, float ancho);
+
+int main() {
+    
+    float largo, ancho;
+    cout << "Ingrese la largo del rectangulo: ";
+    cin >> largo;
+    cout << "Ingrese la ancho del rectangulo: ";
+    cin >> ancho;
+
+    float perimetro = calcularPerimetro(largo, ancho);
+
+    cout << "El perimetro del rectangulo es: " << perimetro << endl;
+
+    return 0;
+}
+
+float calcularPerimetro(float largo, float ancho) {
+    float perimetro = 2 * largo + 2 * ancho;
+    return perimetro;
+}
