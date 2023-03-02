@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int calcularEdad(int anioNacimiento);
+
+int main() {
+    int anioNacimiento;
+    cout << "Ingrese su anio de nacimiento: ";
+    cin >> anioNacimiento;
+
+    int edad = calcularEdad(anioNacimiento);
+
+    if (edad >= 18) {
+        cout << "Usted es mayor de edad." << endl;
+    } else {
+        cout << "Usted es menor de edad." << endl;
+    }
+
+    return 0;
+}
+
+int calcularEdad(int anioNacimiento) {
+
+    int anioActual = 2023;
+
+    int edad = anioActual - anioNacimiento;
+
+    return edad;
+}
