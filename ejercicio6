@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // Declaración de variables
+    int numero;
+
+    // Solicitar al usuario que ingrese un número entero
+    cout << "Ingrese un numero entero: ";
+    cin >> numero;
+
+    // Comprobar si el número es par o impar
+    if (numero % 2 == 0) {
+        cout << "El numero " << numero << " es par." << endl;
+    } else {
+        cout << "El numero " << numero << " es impar." << endl;
+    }
+
+    // Mostrar la dirección de memoria del número en formato hexadecimal
+    cout << "La direccion de memoria del numero es: " << &numero << endl;
+
+    return 0;
+}
