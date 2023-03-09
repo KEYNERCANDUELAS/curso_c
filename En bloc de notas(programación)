@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+
+int main(){ 
+
+    int arreglo[5];
+    string arreglo[5];
+    float limit[5];
+    bool vect[5];
+     int a[]={1,2,3 };
+
+
+
+      
+return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main(){ 
+int a[3];
+ a[0]=1;
+ a[1]=2;
+ a[2]=3;
+
+ string nombres[]={"juan","paco","luis","juanito","cesar"};
+ 
+
+cout<<nombres[4]<<endl;
+nombres[1]="clara";
+cout<<nombres[1]<<endl;
+cout<<a[2];
+
+//for(int i=0;i<3;i++){ 
+    //cout<<"\n"<<"el valor se repite: "<<i;
+  //  cout<<"\n"<<"el valor del vector a["<<i<<"]"<<a[i];
+
+ nombres[5];
+ 
+for(int i=0;i<5;i++){
+cout<<"\n"<<"el valor de nombres: "<<i;
+cout<<"\n"<<"el valor del vector a["<<i<<"]"<<a[i];
+ }
+ int tamanio=sizeof(a)/sizeof(a[0]);
+ int tamanio2=sizeof(nombres)/sizeof(nombres[0]);
+ cout<<"\n"<<tamanio;
+ cout<<"\n"<<tamanio2;
+
+ //de manera dinamica  
+  for(int i=0;i<tamanio2;i++){ 
+    cout<<"\n"<<"el valor del vector tamanio2["<<i<<"]"<<a[i];
+    
+ }
+
+
+
+
+
+
+
+
+
+
+
+    return 0;
+}
