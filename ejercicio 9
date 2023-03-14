@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  string productos[5] = {"producto 1", "producto 2", "producto 3", "producto 4", "producto 5"};
+  // declaramos un arreglo de 5 productos
+
+  productos[2] = "computadora";
+  // reemplazamos el producto de la posición 3 por "computadora" 
+  
+  cout << "El arreglo de productos es:" << endl;
+  for (int i = 0; i < 5; i++) {
+    cout << i << ": " << productos[i] << endl;
+    // imprimimos cada producto con su posición correspondiente
+  }
+
+  return 0;
+}
