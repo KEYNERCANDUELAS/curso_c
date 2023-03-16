@@ -1,0 +1,85 @@
+#include <iostream>
+using namespace std;
+
+int main(){ 
+    int t[5]={5,5,4,3,2};
+    for (int i = 0; i < 5; i++) {
+        cout << "ingrese el numero  " << i+1 << ": "<<endl;
+        cin >> t[i];
+        cout << "ingrese el numero  " << i+2 << ": "<<endl;
+        cin >> t[i];
+        cout << "ingrese el numero  " << i+3 << ": "<<endl;
+        cin >> t[i];
+        cout << "ingrese el numero  " << i+4 << ": "<<endl;
+        cin >> t[i];
+        cout << "ingrese el numero  " << i+5<< ": "<<endl;
+        cin >> t[i];
+
+        int tamanio=sizeof(t)/sizeof(t[5]);
+ int tamanio2=sizeof(t)/sizeof(t[5]);
+ cout<<"\n"<<tamanio;
+ cout<<"\n"<<tamanio2;
+
+//numero mayor
+for(int i=1;i<tamanio;i++){ ;
+cout<<"\n"<<"el valor del vector a["<<i<<"]"<<t[i];
+
+int num_mayor=t[4];
+ for (int i = 1; i < tamanio; i++)
+    {
+        if (t[i] > num_mayor)
+        {
+            num_mayor = t[i]; // actualizamos el valor del menor
+        }
+    }
+
+    cout<<"\n"<< "el numero mayor es: " << num_mayor;
+
+//numero menor
+int num_menor = t[4];
+
+    for (int i = 1; i < tamanio; i++)
+    {
+        if (t[i] < num_menor)
+        {
+            num_menor = t[i]; // actualizamos el valor del menor
+        }
+    }
+
+    cout<<"\n"<< "el numero menor es: " << num_menor;
+
+    //hallamos el que se repite
+    int repite= t[4];
+
+     for (int i = 1; i < tamanio; i++)
+    {
+        if (t[i] == repite)
+        
+        {
+            repite = t[i]; 
+        }
+    }
+
+    cout<<"\n"<< "el numero que se repite es: " << repite;
+
+    // numero igual mejorado
+    int cont =0;
+  	for (int i = 0; i < tamanio-1; i++)
+    {
+        int numero_igual_temp = t[i];
+        for (int y = i+1; y <tamanio; y++)
+        {
+            if (numero_igual_temp == t[y])
+            {
+                numero_igual_temp = t[y];
+                cont++;
+ }
+  }
+   }
+    return 0;
+ }
+ 
+ }
+  }
+  
+  https://codeshare.io/loZbDj
