@@ -1,0 +1,91 @@
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+class Estudiante{
+    private:
+    //atributos
+    string codigo;
+    string nombre;
+    string apellido;
+    string dni;
+    int edad;
+    //datetime fecha_nacimiento;
+
+    //metodos y funciones
+    public:
+    //constructor
+     Estudiante(string nom, string ap, string dni, int edad){
+        nombre = nom;
+        apellido = ap;
+        dni = dni;
+        edad = edad;
+    }
+
+    string getCodigo()
+    {
+        return codigo;
+    }
+    string getNombre(){
+        return nombre;
+    }
+    string getApellido(){
+        return apellido;
+    }
+    
+    string getDni(){
+        return dni;
+    }
+    
+    void setCodigo(string _codigo){
+codigo = _codigo;
+    }
+    void setNombre(string _nombre){
+nombre = _nombre;
+    }
+    void setApellido(string _apellido){
+apellido = _apellido;
+    }
+    void setDni(string _dni){
+dni = _dni;
+    }
+
+    int getEdad(){
+        return edad;
+    }
+
+    int setEdad(int _edad){
+        edad =  _edad;
+    }
+   
+    //datetime fecha_nacimiento;
+   //datetime fecha_nacimiento;
+void imprimir(){
+
+    cout<<"los datos del estudiante es: \t"<<nombre<<"\t"<<apellido<<"\t"<<dni<<"\n"<<edad<<"\n";
+}
+};
+
+int main(){
+    //crear objetos
+    //Estudiante est = new Estudiante();
+    /*Estudiante est("Jose", "Lopez", "14578544");
+    cout<<"el nombre del estudiante es: "<<est.getNombre();
+    */
+ Estudiante est1("jose","flores","234",20);
+   Estudiante est2("lucho","cuellar","123",25);
+ Estudiante est3("pepe","duran","567",28);
+
+   cout<<"los datos del estudiante: "<<"\n";
+   est1.imprimir();
+   est2.imprimir();
+   est3.imprimir();
+
+   //ahora vamos a actualizar los datos de 
+   
+   est2.setNombre("jorge el curioso");
+   est2.setDni("5812376");
+   est2.setEdad(40);
+   est2.imprimir();
+     }
