@@ -1,0 +1,101 @@
+#include<iostream>
+using namespace std;
+
+// Clase Cuadrilátero
+class Cuadrilatero {
+    private:
+        float lado1, lado2, lado3, lado4;
+    public:
+        Cuadrilatero(float l1, float l2, float l3, float l4) {
+            lado1 = l1;
+            lado2 = l2;
+            lado3 = l3;
+            lado4 = l4;
+        }
+
+        // Métodos para manipular variables
+        void setLado1(float l1) {
+            lado1 = l1;
+        }
+
+        void setLado2(float l2) {
+            lado2 = l2;
+        }
+
+        void setLado3(float l3) {
+            lado3 = l3;
+        }
+
+        void setLado4(float l4) {
+            lado4 = l4;
+        }
+
+        // Métodos para calcular el área y el perímetro
+        virtual float area() = 0;
+        virtual float perimetro() = 0;
+
+        // Método para imprimir los lados del cuadrilátero
+        void imprimirLados() {
+            cout << "Lados: " << lado1 << ", " << lado2 << ", " << lado3 << ", " << lado4 << endl;
+        }
+};
+
+// Clase Rectángulo
+class Rectangulo : public Cuadrilatero {
+    public:
+        Rectangulo(float base, float altura) : Cuadrilatero(base, altura, base, altura) {}
+
+        float area() {
+            return lado1 * lado2;
+        }
+
+        float perimetro() {
+            return 2 * lado1 + 2 * lado2;
+        }
+};
+
+// Clase Cuadrado
+class Cuadrado : public Cuadrilatero {
+    public:
+        Cuadrado(float lado) : Cuadrilatero(lado, lado, lado, lado) {}
+
+        float area() {
+            return lado1 * lado1;
+        }
+
+        float perimetro() {
+            return 4 * lado1;
+        }
+};
+
+// Clase Trapecio
+class Trapecio : public Cuadrilatero {
+    private:
+        float altura;
+    public:
+        Trapecio(float base1, float base2, float altura, float lado) : Cuadrilatero(base1, base2, lado, lado) {
+            this->altura = altura;
+        }
+
+        float area() {
+            return (lado1 + lado2) * altura / 2;
+        }
+
+        float perimetro() {
+            return lado1 + lado2 + 2 * lado3;
+        }
+};
+
+int main() {
+    // Declarar objetos de tipo Rectángulo, Cuadrado y Trapecio
+    Rectangulo r(6, 4);
+    Cuadrado c(5);
+    Trapecio t(5, 10, 3, 4);
+
+    // Modificar el valor de algunos lados
+    r.setLado1(8);
+    c.setLado1(6);
+
+    // Imprimir los lados de cada cuadrilátero y obtener la sumatoria de los lados
+    r.imprimirLados();
+    c.imprimirLados
