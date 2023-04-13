@@ -1,0 +1,56 @@
+#include<iostream>
+using namespace std;
+
+class Cuadrilatero {
+    private:
+        float lado1, lado2, lado3, lado4;
+    public:
+        Cuadrilatero(float l1, float l2, float l3, float l4) {
+            lado1 = l1;
+            lado2 = l2;
+            lado3 = l3;
+            lado4 = l4;
+        }
+
+        // Métodos para manipular variables
+        void setLado1(float l1) {
+            lado1 = l1;
+        }
+
+        void setLado2(float l2) {
+            lado2 = l2;
+        }
+
+        void setLado3(float l3) {
+            lado3 = l3;
+        }
+
+        void setLado4(float l4) {
+            lado4 = l4;
+        }
+
+        // Métodos para calcular el área y el perímetro
+        float area() {
+            return lado1 * lado2;
+        }
+
+        float perimetro() {
+            return lado1 + lado2 + lado3 + lado4;
+        }
+};
+
+int main() {
+    // Crear un objeto Cuadrilatero con lados 5, 7, 5 y 7
+    Cuadrilatero c(5, 7, 5, 7);
+
+    // Obtener el área y el perímetro del cuadrilátero
+    cout << "El area del cuadrilatero es: " << c.area() << endl;
+    cout << "El perimetro del cuadrilatero es: " << c.perimetro() << endl;
+
+    // Cambiar el valor del lado 1 y obtener el nuevo área y perímetro
+    c.setLado1(10);
+    cout << "El area del cuadrilatero es ahora: " << c.area() << endl;
+    cout << "El perimetro del cuadrilatero es ahora: " << c.perimetro() << endl;
+
+    return 0;
+}
