@@ -1,0 +1,44 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+// Declaración de la clase Facultad
+class Facultad {
+    private:
+        string codigo;
+        string descripcion;
+        string siglas;
+    public:
+        // Constructor de la clase Facultad
+        Facultad(string _codigo = "", string _descripcion = "", string _siglas = "") 
+        {
+            codigo = _codigo;
+            descripcion = _descripcion;
+            siglas = _siglas;
+        }
+        // Métodos para acceder y modificar los datos de la Facultad
+        string getCodigo() {
+            return codigo;
+        }
+        void setCodigo(string _codigo) {
+            codigo = _codigo;
+        }
+        string getDescripcion() {
+            return descripcion;
+        }
+        void setDescripcion(string _descripcion) {
+            descripcion = _descripcion;
+        }
+        string getSiglas() {
+            return siglas;
+        }
+        void setSiglas(string _siglas) {
+            siglas = _siglas;
+        }
+        // Método para imprimir información de la Facultad
+        void imprimirInfo() {
+            cout << "Código: " << codigo << endl;
+            cout << "Descripción: " << descripcion << endl;
+            cout << "Siglas: " << siglas << endl;
+        }
+};
