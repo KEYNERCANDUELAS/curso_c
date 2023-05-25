@@ -1,0 +1,55 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Clase Estudiante
+class Estudiante {
+private:
+    string nombre;
+    string facultad;
+    string cursos[3];
+
+public:
+    // Constructor de la clase Estudiante
+    Estudiante(string _nombre, string _facultad, string curso1, string curso2, string curso3) {
+        nombre = _nombre;
+        facultad = _facultad;
+        cursos[0] = curso1;
+        cursos[1] = curso2;
+        cursos[2] = curso3;
+    }
+
+    // Método para mostrar la información del estudiante
+    void mostrarInformacion() {
+        cout << "Nombre: " << nombre << endl;
+        cout << "Facultad: " << facultad << endl;
+        cout << "Cursos: ";
+        for (int i = 0; i < 3; i++) {
+            cout << cursos[i] << " ";
+        }
+        cout << endl << endl;
+    }
+};
+
+int main() {
+    // Crear objetos de la clase Estudiante para 8 estudiantes
+    Estudiante estudiantes[8] = {
+        Estudiante("Estudiante 1", "FIIS", "Curso 1A", "Curso 1B", "Curso 1C"),
+        Estudiante("Estudiante 2", "FIIS", "Curso 2A", "Curso 2B", "Curso 2C"),
+        Estudiante("Estudiante 3", "FIIS", "Curso 3A", "Curso 3B", "Curso 3C"),
+        Estudiante("Estudiante 4", "FIIS", "Curso 4A", "Curso 4B", "Curso 4C"),
+        Estudiante("Estudiante 5", "ZOOTECNIA", "Curso 1A", "Curso 1B", "Curso 1C"),
+        Estudiante("Estudiante 6", "ZOOTECNIA", "Curso 2A", "Curso 2B", "Curso 2C"),
+        Estudiante("Estudiante 7", "ZOOTECNIA", "Curso 3A", "Curso 3B", "Curso 3C"),
+        Estudiante("Estudiante 8", "ZOOTECNIA", "Curso 4A", "Curso 4B", "Curso 4C")
+    };
+
+    // Mostrar información de cada estudiante
+    for (int i = 0; i < 8; i++) {
+        cout << "Información del estudiante " << i + 1 << ":" << endl;
+        estudiantes[i].mostrarInformacion();
+    }
+
+    return 0;
+}
